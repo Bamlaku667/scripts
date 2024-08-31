@@ -1,0 +1,9 @@
+sudo systemctl stop postgresql
+rpm -qa | grep postgres
+sudo dnf remove postgresql*  # For Red Hat 8 and newer, including RHEL 9
+sudo rm -rf /var/lib/pgsql/
+sudo rm -rf /var/lib/pgsql/data/
+sudo rm -rf /var/lib/pgsql/16/  # Adjust this path based on your PostgreSQL version
+sudo rm -rf /etc/postgresql/
+sudo rm -rf /etc/pgpool/
+sudo rm -rf /var/log/postgresql/
